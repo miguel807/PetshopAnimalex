@@ -1,0 +1,452 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>PetShop</title>
+
+
+    <link href="{% static 'assets/dist/css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'navbar.css'%}" rel="stylesheet">
+    <!--carousel-->
+    <link href="{% static 'css/carousel.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fontawesome-5.5/css/all.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'slick/slick.css'%}">
+    <link rel="stylesheet" href="{% static 'slick/slick-theme.css'%}">
+    <link rel="stylesheet" href="{% static 'magnific-popup/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/tooplate-infinite-loop.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/camera.css'%}">
+    <style>
+
+      body{
+        background-color: rgb(227, 231, 233);
+        box-sizing: border-box;
+        padding-top: 0px;
+        background-color: whitesmoke;
+        padding-bottom: 0px;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background: url({% static './img/banner4.jpg'%}) no-repeat center/cover;
+
+      }
+
+
+      .fondo1{
+        background: url({% static './img/banner.jpg'%}) no-repeat center/cover;
+         background-size: cover;
+      }
+      .fondo2{
+      background: url({% static './img/banner1.jpg'%}) no-repeat center/cover;
+        background-size: cover ;
+      }
+
+
+      .container-flex{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: auto;
+    }
+
+    .slick-prev{
+      background: gray;
+      color: transparent;
+      border-radius:100px ;
+    }
+
+    .slick-prev:hover{
+      background-color:#009fb3 ;
+    }
+    .slick-next{
+      background-color: gray;
+      border-radius:100px ;
+    }
+    .slick-next:hover{
+      background-color:#009fb3 ;
+    }
+
+    .card{
+      margin-left: 1rem;
+      margin-right: 1rem;
+      background-color: rgb(238, 233, 233);
+
+    }
+    .card-title,.card-text{
+    text-aling:center;
+    }
+
+    .moreVentas-flex{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-basis: 80%;
+      justify-content: center;
+    }
+
+    .show{
+      margin-top: 0px;
+      background-color: #03383e;
+      background-color: #212529;
+      color: antiquewhite;
+      opacity: 0.95;
+      width: 199px;
+      margin-right: -16px;
+      outline:1px solid antiquewhite;
+
+
+    }
+    .show ul li a{
+      color: antiquewhite;
+    }
+    .collapsing{
+      margin-top: 0px;
+      background-color:#03383e;
+      background-color: #212529;
+      margin-right: -16px;
+      opacity: 0.95;
+      outline:1px solid white;
+    }
+    .collapsing ul li a{
+      color: antiquewhite;
+    }
+    
+    .nav-item a{
+      color: antiquewhite;
+    }
+
+    .section-PG{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-top: 20px;
+        position: relative;
+        top: 50px;
+        margin-left:11%;
+        justify-content: left;
+        gap: 10px;
+        padding-bottom: 20px;
+        background-color:#03383e;
+
+    }
+    .card-title{
+        text-align: center;
+    }
+    .card-text{
+        text-align: center;
+    }
+    .card-body{
+        background-color:white;
+    }
+    .colorM{
+      color: white;
+      font-weight:bold;
+         }
+
+      </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example" style="height: 93px;z-index: 3333; position: relative; width: 100%;">
+    <div class="container-fluid" style="margin-left: 10%;" >
+      <a class="navbar-brand" href="#"><img src="{% static 'img/logoo.jpg'%}" alt="" style="object-fit: cover;width:72px ;height: 72px;border-radius: 90px;margin-right: 10%;">ANIMALEX</a>
+      <button class="navbar-toggler" type="button"   data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#intro">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          -->
+      <div class="collapse navbar-collapse" id="navbarsExample03"  style="margin-left: 30%;">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'Home' %}" style="margin-right: 15px;color:antiquewhite">HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 15px;color: antiquewhite;background-color:#34343702;">TIENDA</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'PerrosGatos'%}">Accesorios para<br>mascotas</a></li>
+              <li><a class="dropdown-item" href="{% url 'ProductosPeces'%}">Accesorios para peces</a></li>
+              <li><a class="dropdown-item" href="{% url 'Aves'%}">Accesorios para aves</a></li>
+              <li><a class="dropdown-item" href="{% url 'HamsterArdillas'%}">Accesorios para<br>roedores</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Contacto'%}" style="margin-right: 15px;color: antiquewhite;">CONTACTO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-end" id="intro" style="width: 60%; background-color: #03383e; opacity: 0.9;border-right: 2px solid white;border-bottom: 2px solid white;" >
+    <div class="offcanvas-header">
+        <div class="offcanvas-title">
+        
+          <div class="offcanvas-body " style="margin-top: 78px;height: 500px; width: 100%;">
+             <ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'Home' %}" style="margin-right: 0px;color:antiquewhite">HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 15px;color: antiquewhite;background-color:#34343702;">TIENDA</a>
+            <ul class="dropdown-menu" style="background-color: #03383e;position: absolute;border-left: 1px solid white;border-bottom:1px solid white ;">
+              <li><a class="dropdown-item" href="{% url 'PerrosGatos'%}">Accesorios para<br>perros y gatos.</a></li>
+              <li><a class="dropdown-item" href="{% url 'ProductosPeces'%}">Accesorios para peces.</a></li>
+              <li><a class="dropdown-item" href="{% url 'Aves'%}">Accesorios para aves.</a></li>
+              <li><a class="dropdown-item" href="{% url 'HamsterArdillas'%}">Accesorios para<br>hanster y ardillas.</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Contacto'%}" style="margin-right: 15px;color: antiquewhite;position: relative;">CONTÁCTO</a>
+          </li>
+        </ul>
+          </div>
+        </div>
+    </div>
+
+  </div>
+    {% block content %}
+
+    {% endblock %}
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" style="height: 150px;background-color: #212529;outline: 10px solid  #212529;position: relative;top: 35px;padding: 15px; padding-bottom: 20px;maring-bottom:0px">
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" style="margin:auto ;">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="#009fb3" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+    </a>
+    <span class="mb-3 mb-md-0 text-muted" > <b style="color: #009fb3; font-size: 15px;font-family:arial;">&copy; Encuentranos en: Ave.51,Esq.250,Rpt San Agustín, La Lisa.</b></span>
+  </div>
+
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="margin:auto;padding-bottom: 10px;">
+    <p style="color:#009fb3;margin:0px;font-weight:bold;font-family:arial">CONTÁCTO</p>
+    <li class="ms-3"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="#009fb3" class="bi bi-whatsapp" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg></a></li>
+
+    <li class="ms-3"><a class="text-muted" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="#009fb3" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      </svg></a></li>
+  </ul>
+</footer>
+
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'js/jquery-1.9.1.min.js'%}"></script>
+    <script src="{% static 'slick/slick.min.js'%}"></script>
+    <script src="{% static 'magnific-popup/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'js/easing.min.js'%}"></script>
+    <script src="{% static 'js/jquery.singlePageNav.min.js'%}"></script>
+
+
+
+
+    <script>
+      function getOffSet(){
+    var _offset = 450;
+    var windowHeight = window.innerHeight;
+
+    if(windowHeight > 500) {
+      _offset = 400;
+    }
+    if(windowHeight > 680) {
+      _offset = 300
+    }
+    if(windowHeight > 830) {
+      _offset = 210;
+    }
+
+    return _offset;
+  }
+
+  function setParallaxPosition($doc, multiplier, $object){
+    var offset = getOffSet();
+    var from_top = $doc.scrollTop(),
+      bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+    $object.css({"background-position" : bg_css });
+  }
+
+  // Parallax function
+  // Adapted based on https://codepen.io/roborich/pen/wpAsm
+  var background_image_parallax = function($object, multiplier, forceSet){
+    multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+    multiplier = 1 - multiplier;
+    var $doc = $(document);
+    // $object.css({"background-attatchment" : "fixed"});
+
+    if(forceSet) {
+      setParallaxPosition($doc, multiplier, $object);
+    } else {
+      $(window).scroll(function(){
+        setParallaxPosition($doc, multiplier, $object);
+      });
+    }
+  };
+
+  var background_image_parallax_2 = function($object, multiplier){
+    multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+    multiplier = 1 - multiplier;
+    var $doc = $(document);
+    $object.css({"background-attachment" : "fixed"});
+
+    $(window).scroll(function(){
+      if($(window).width() > 768) {
+        var firstTop = $object.offset().top,
+            pos = $(window).scrollTop(),
+            yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+        var bg_css = 'center ' + yPos + 'px';
+
+        $object.css({"background-position" : bg_css });
+      } else {
+        $object.css({"background-position" : "center" });
+      }
+    });
+  };
+
+  $(function(){
+    // Hero Section - Background Parallax
+    background_image_parallax($(".tm-parallax"), 0.30, false);
+    background_image_parallax_2($("#contact"), 0.80);
+    background_image_parallax_2($("#testimonials"), 0.80);
+
+    // Handle window resize
+    window.addEventListener('resize', function(){
+      background_image_parallax($(".tm-parallax"), 0.30, true);
+    }, true);
+
+    // Detect window scroll and update navbar
+    $(window).scroll(function(e){
+      if($(document).scrollTop() > 120) {
+        $('.tm-navbar').addClass("scroll");
+      } else {
+        $('.tm-navbar').removeClass("scroll");
+      }
+    });
+
+    // Close mobile menu after click
+    $('#tmNav a').on('click', function(){
+      $('.navbar-collapse').removeClass('show');
+    })
+
+    // Scroll to corresponding section with animation
+    $('#tmNav').singlePageNav({
+      'easing': 'easeInOutExpo',
+      'speed': 600
+    });
+
+    // Add smooth scrolling to all links
+    // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 600, 'easeInOutExpo', function(){
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+
+    // Pop up
+    $('.tm-gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: { enabled: true }
+    });
+
+    $('.tm-testimonials-carousel').slick({
+      dots: true,
+      prevArrow: false,
+      nextArrow: false,
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+              slidesToShow: 1
+          }
+        }
+      ]
+    });
+
+    // Gallery
+    $('.tm-gallery').slick({
+      dots: true,
+      infinite: false,
+      slidesToShow: 5,
+      slidesToScroll: 2,
+      responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+    });
+  });
+
+    </script>
+
+
+  </body>
+</html>

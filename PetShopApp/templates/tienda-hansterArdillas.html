@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body style="background-color: #03383e;">
+
+      <div class="grid_12" style="width: 80%; margin: auto;margin-top: 20px;" >
+        <h4 style="text-align: left;color: antiquewhite;font-size: 15px;font-weight: lighter;margin-left: 3%;">Accesorios para hanster y ardillas: </h4>
+        <h2 style="text-align: center; color: antiquewhite;" >ANIMALEX <span> LA MÁS ALTA CALIDAD EN LA VENTA DE PRODUCTOS PARA SUS MASCOTAS</span></h2>
+      </div>
+
+      <div class="section-PG" >
+
+          {% for post in posts %}
+                <div class="card" style="width: 14rem;background-color:white;">
+                    <img class="card-img-top" src="{{ post.imagen.url }}" alt="Card image cap" style="width:90%; height:90%;object-fit:cover;margin:auto;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ post.nombreProducto }}</h5>
+                      <p class="card-text">{{ post.descripcion }}
+                      </p>
+                      <a href="#" class="btn btn-primary" style="width: 95%;margin:auto;">{{ post.precio }}$</a>
+                    </div>
+                  </div>
+          {% endfor %}
+    </div>
+
+    <nav aria-label="Standard pagination example" style=" width: 80%;margin: auto;margin-top: 60px;position: relative;right:15px ;">
+        <ul class="pagination" style="margin: auto;justify-content: center;">
+            {% if posts.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ posts.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+            {% endif %}
+
+            {% for pagina in paginas %}
+
+              <li class="page-item {% if paginaActual == pagina %} active {% endif %}"><a class="page-link" href="?page={{pagina}}">{{pagina}}</a></li>
+
+            {% endfor %}
+            {% if posts.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ posts.next_page_number }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+            {% endif %}
+        </ul>
+      </nav>
+
+
+</body>
+{% endblock %}

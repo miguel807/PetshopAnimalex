@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: 0px;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" >
+      
+        <svg class="bd-placeholder-img"  width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="transparent" /></svg>
+        
+        <div class="container"  >
+          <div class="carousel-caption text-start" >
+            <h1 >TIENDA <b> ANIMALEX </b> </h1>
+            <p>Ventas de mascotas</p>
+            <p>Ventas de accesorios para animales</p>
+            <p>Consejo para el cuidado de mascotas</p>
+            <p class="colorM">Encuentranos en: Ave.51,Esq.250,Rpt San Agustín, La Lisa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item"  >
+    
+        <svg class="bd-placeholder-img fondo1" style="opacity:0.9;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="transparent"/></svg>
+        
+        <div class="container">
+          <div class="carousel-caption text-start"  >
+            <h1 class="colorM">TIENDA <b> ANIMALEX </b> </h1>
+            <p class="colorM">Ventas de mascotas</p>
+            <p class="colorM">Ventas de accesorios para animales</p>
+            <p class="colorM">Consejo para el cuidado de mascotas</p>
+            <p class="colorM">Encuentranos en: Ave.51,Esq.250,Rpt San Agustín, La Lisa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        
+        <svg class="fondo2" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="transparent"/></svg>
+        
+        <div class="container">
+          <div class="carousel-caption text-start"  >
+            <h1 >TIENDA <b> ANIMALEX </b> </h1>
+            <p>Ventas de mascotas</p>
+            <p>Ventas de accesorios para animales</p>
+            <p>Consejo para el cuidado de mascotas</p>
+            <p class="colorM">Encuentranos en: Ave.51,Esq.250,Rpt San Agustín, La Lisa.</p>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <div class="grid_12" style="width: 80%; margin: auto;" >
+    <h2 style="text-align: center;" >BIENVENIDO A ANIMALEX <span> LA MÁS ALTA CALIDAD EN LA VENTA DE PRODUCTOS PARA SUS MASCOTAS</span></h2>
+  </div>
+  <div style="width: 80%;margin: auto;">
+  
+    <h3 class="tm-text-primary tm-section-title mb-4" style="color: #009fb3; text-align: center; padding: 5px 0px; border-bottom: 2px solid gray;" >Servicios</h3>
+  </div>
+
+
+
+  <div class="container-flex " style="padding-top:20px">
+  
+    <div class="card" style="width: 15rem; border:2px solid  #009fb3;margin-left: 25px;margin-bottom:15px;background-color:white;padding-top:5px;" >
+      <img class="card-img-top" src="{% static 'img/logo mascota.jpg'%}" style="width: 28%; object-fit: cover; margin: auto;">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title" style="color: #009fb3;" >Accesorios para mascotas</h5>
+        <p class="card-text"></p>
+        <a href="{% url 'PerrosGatos'%}" class="btn btn-primary" style="width:80%;">Ir</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 15rem;border:2px solid  #009fb3;margin-left: 25px;margin-bottom:15px;background-color:white;padding-top:5px;">
+      <img class="card-img-top" src="{% static 'img/pezCop.jpg'%}" alt="Card image cap" style="width: 28%; object-fit: cover; margin: auto;border-radius:90px;">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title" style="color: #009fb3;">Accesorios para peces</h5>
+        <p class="card-text"></p>
+        <a href="{% url 'ProductosPeces'%}" class="btn btn-primary" style="width:80%;">Ir</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 15rem;border:2px solid  #009fb3;margin-left: 25px;margin-bottom:10px;background-color:white;padding-top:5px;">
+      <img class="card-img-top" src="{% static 'img/avvv.jpg'%}" style="width: 28%; object-fit: cover; margin: auto;border-radius:10px;backgound-color:white;" alt="Card image cap">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title" style="color: #009fb3;">Accesorios para aves</h5>
+        <p class="card-text"></p>
+        <a href="{% url 'Aves'%}" class="btn btn-primary" style="width:80%; margin-top:20px;">Ir</a>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 15rem;border:2px solid  #009fb3;margin-left: 25px;margin-bottom:10px;background-color:white;padding-top:5px;">
+      <img class="card-img-top" src="{% static 'img/ardCop.jpg'%}" style="width: 28%; object-fit: cover; margin: auto;" alt="Card image cap">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title" style="color: #009fb3;">Accesorios para roedores</h5>
+        <p class="card-text"></p>
+        <a href="{% url 'HamsterArdillas'%}" class="btn btn-primary" style="width:80%;">Ir</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!--Prueba-->
+
+<section id="gallery" class="tm-section-pad-top" style="background-color: rgb(2, 133, 133);background-color: #03383e;;" >
+  <div class="container tm-container-gallery">
+    <div class="row">
+      <div class="text-center col-12">
+          <h3 class="tm-text-primary tm-section-title mb-4" style="color: #94dae4;">Productos en Ofertas</h3>
+          <p class="mx-auto tm-section-desc" style="color: white;">
+           Recibe estas ofertas con descuentos a precios increibles por tiempo limitado. 
+          <span> Lo mejor para su mascota con una calidad garantizada.</span>
+          </p>
+      </div>            
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="mx-auto tm-gallery-container"  >
+                <div class="grid tm-gallery ">
+
+                  {% for datos in datosProductosOfertas %}
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{datos.imagen.url}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title" style="text-align: center;">{{datos.nombreProducto}}</h5>
+                      <p class="card-text" style="text-align: center;">{{datos.descripcion}}</p>
+                      <a href="#" class="btn btn-primary" style="width: 95%;margin:auto;">{{datos.precio}}$</a>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                </div>
+            </div>                
+        </div>        
+      </div>
+  </div>
+</section>
+
+
+<!--Productos mas vendidos-->
+<div class="row" style="width: 90%;margin: auto;">
+  <div class="text-center col-12">
+      <h3 class="tm-text-primary tm-section-title mb-4" style="color: #009fb3; border-top: 2px solid gray;
+      padding-top: 8px;">Productos más vendidos</h3>
+      <p class="mx-auto tm-section-desc">
+       Una muestra de algunos de los productos mas vendidos en nuestra tienda 
+       <br>
+      <span> Lo mejor para su mascota con una calidad garantizada.</span>
+      </p>
+  </div>            
+</div>
+ <div class="moreVentas-flex" >
+
+   {% for datos1 in datosProductosMasVentas %}
+        <div class="card" style="width: 18rem;margin-bottom:5px; background-color:white;">
+          <img class="card-img-top" src="{{datos1.imagen.url}}" alt="Card image cap " style="object-fit: cover;width: 50%;margin: auto; ">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">{{datos1.nombreProducto}}</h5>
+            <p class="card-text" style="text-align: center;">{{datos1.descripcion}}</p>
+            <a href="#" class="btn btn-primary" style="width: 95%;margin:auto;">{{datos1.precio}}</a>
+          </div>
+        </div>
+   {% endfor %}
+
+  
+ </div>
+
+{% endblock %}
